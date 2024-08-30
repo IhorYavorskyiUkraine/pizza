@@ -1,9 +1,7 @@
-import { cn } from "../../lib/utils";
-import { Title } from "./Title";
-import { Button } from "../ui";
+import { cn } from "@lib";
+import { Button } from "@ui";
 import { ProductWithRelations } from "../../@types/product";
-import { PizzaImage } from "./PizzaImage";
-import { SelectorVar } from "./SelectorVar";
+import { PizzaImage, SelectorVar, Title } from "@components";
 import { pizzaSizes } from "../../constants/pizza";
 
 interface Props {

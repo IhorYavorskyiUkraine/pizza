@@ -1,10 +1,8 @@
 "use client";
 
 import { Ingredient } from "@prisma/client";
-import { Input } from "../ui";
-import { CheckBoxFiltersGroup } from "./CheckBoxFiltersGroup";
-import { RangeSlider } from "./RangeSlider";
-import { Title } from "./Title";
+import { Input } from "@ui";
+import { CheckBoxFiltersGroup, RangeSlider, Title } from "@components";
 import { useQueryFilters, useFilters, useIngredients } from "../../hooks";
 
 export type IngredientItem = Pick<Ingredient, "id" | "name">;

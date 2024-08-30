@@ -1,12 +1,11 @@
 "use client";
 
-import { Dialog } from "../../ui";
+import { Dialog } from "@ui";
 import { DialogContent } from "../../ui/dialog";
-import { cn } from "../../../lib/utils";
+import { cn } from "@lib";
 import { useRouter } from "next/navigation";
-import { ChooseProductModal } from "../ChooseProductModal";
+import { ChooseProductModal, ChoosePizzaModal } from "@components";
 import { ProductWithRelations } from "../../../@types/product";
-import { ChoosePizzaModal } from "../ChoosePizzaModal";
 
 interface Props {
    product: ProductWithRelations;

@@ -13,4 +13,6 @@ export { ChooseProductModal } from "./ChooseProductModal";
 export { ChoosePizzaModal } from "./ChoosePizzaModal";
 export { PizzaImage } from "./PizzaImage";
 export { SelectorVar } from "./SelectorVar";
+export { CheckBoxFiltersGroup } from "./CheckBoxFiltersGroup";
+export { RangeSlider } from "./RangeSlider";
 export * from "./modals";

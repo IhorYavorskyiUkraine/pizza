@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "../../lib/utils";
+import { cn } from "@lib";
 import { Search } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";

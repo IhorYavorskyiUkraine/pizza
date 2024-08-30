@@ -3,9 +3,8 @@
 import { useIntersection } from "react-use";
 import { useEffect, useRef } from "react";
 
-import { cn } from "../../lib/utils";
-import { ProductCard } from "./ProductCard";
-import { Title } from "./Title";
+import { cn } from "@lib";
+import { ProductCard, Title } from "@components";
 import { useCategoryStore } from "../../store/category";
 
 interface Props {

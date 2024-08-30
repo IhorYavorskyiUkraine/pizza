@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { prisma } from "../../../prisma/client";
+import { prisma } from "@client";
 
 export async function GET() {
    const users = await prisma.user.findMany();

@@ -18,7 +18,14 @@
          }
       ],
       "paths": {
-         "@/*": ["./src/*"]
+         "@/*": ["./src/*"],
+         "@lib*": ["./lib/utils.ts"],
+         "@ui*": ["./components/ui/index.ts"],
+         "@components*": ["./components/shared/index.ts"],
+         "@types*": ["./@types/*"],
+         "@hooks*": ["./hooks/index.ts"],
+         "@services*": ["./services/*.ts"],
+         "@client*": ["./prisma/client.ts"]
       }
    },
    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

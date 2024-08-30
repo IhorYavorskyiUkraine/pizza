@@ -1,6 +1,6 @@
-import { cn } from "../../lib/utils";
-import { Title } from "./Title";
-import { Button } from "../ui";
+import { cn } from "@lib";
+import { Title } from "@components";
+import { Button } from "@ui";
 
 interface Props {
    imageUrl: string;

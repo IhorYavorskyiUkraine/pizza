@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Input, Skeleton } from "../ui";
-import { FilterCheckbox, FilterCheckboxProps } from "./FilterCheckbox";
+import { Input, Skeleton } from "@ui";
+import { FilterCheckbox } from "@components";
+import { FilterCheckboxProps } from "./FilterCheckbox";
 
 type Item = FilterCheckboxProps;
 

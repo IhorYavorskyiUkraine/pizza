@@ -1,7 +1,6 @@
 import { notFound } from "next/navigation";
-import { prisma } from "../../../../../prisma/client";
-import { Container, PizzaImage, Title } from "../../../../../components/shared";
-import { SelectorVar } from "../../../../../components/shared";
+import { Container, PizzaImage, Title, SelectorVar } from "@components";
+import { prisma } from "@client";
 
 export default async function ProductPage({
    params: { id },
