@@ -5,7 +5,7 @@ import { DialogContent } from "../../ui/dialog";
 import { cn } from "../../../lib/utils";
 import { useRouter } from "next/navigation";
 import { ChooseProductModal } from "../ChooseProductModal";
-import { ProductWithRelations } from "../../../../@types/product";
+import { ProductWithRelations } from "../../../@types/product";
 import { ChoosePizzaModal } from "../ChoosePizzaModal";
 
 interface Props {

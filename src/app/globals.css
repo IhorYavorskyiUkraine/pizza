@@ -86,7 +86,7 @@ html {
 }
 
 #nprogress .peg {
-   @apply shadow-md shadow-primary !important;
+   @apply shadow-primary shadow-md !important;
 }
 
 #nprogress .spinner-icon {

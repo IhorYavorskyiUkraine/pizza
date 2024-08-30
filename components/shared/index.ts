@@ -12,4 +12,5 @@ export { SearchInput } from "./SearchInput";
 export { ChooseProductModal } from "./ChooseProductModal";
 export { ChoosePizzaModal } from "./ChoosePizzaModal";
 export { PizzaImage } from "./PizzaImage";
+export { SelectorVar } from "./SelectorVar";
 export * from "./modals";
