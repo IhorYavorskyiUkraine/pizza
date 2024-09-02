@@ -2,7 +2,7 @@
 
 import { cn } from "@lib";
 
-type Variant = {
+export type Variant = {
    name: string;
    value: string;
    disabled?: boolean;
@@ -19,7 +19,7 @@ interface Props {
    className?: string;
 }
 
-export const SelectorVar: React.FC<Props> = ({
+export const SelectorVariants: React.FC<Props> = ({
    items,
    onClick,
    selectedValue,

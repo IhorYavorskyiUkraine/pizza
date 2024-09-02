@@ -19,7 +19,7 @@
       ],
       "paths": {
          "@/*": ["./src/*"],
-         "@lib*": ["./lib/utils.ts"],
+         "@lib*": ["./lib/index.ts"],
          "@ui*": ["./components/ui/index.ts"],
          "@components*": ["./components/shared/index.ts"],
          "@types*": ["./@types/*"],
