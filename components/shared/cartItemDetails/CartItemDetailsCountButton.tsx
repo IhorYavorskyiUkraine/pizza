@@ -1,3 +1,3 @@
-import { CountButton } from "@components*";
+import { CountButton } from "@components";
 
 export const CartItemDetailsCountButton = CountButton;

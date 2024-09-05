@@ -6,6 +6,7 @@ import { cn } from "@lib";
 import { useRouter } from "next/navigation";
 import { ChooseProductModal, ChoosePizzaModal } from "@components";
 import { ProductWithRelations } from "../../../@types/product";
+import { useCartStore } from "../../../store";
 
 interface Props {
    product: ProductWithRelations;
@@ -14,7 +15,21 @@ interface Props {
 
 export const ChooseProduct: React.FC<Props> = ({ product, className }) => {
    const router = useRouter();
-   const isPizzaForm = Boolean(product.variants[0].pizzaType);
+   const firstItem = product.variants[0];
+   const isPizzaForm = Boolean(firstItem.pizzaType);
+   const addCartItem = useCartStore(state => state.addCartItem);
+
+   const onAddProduct = () => {
+      addCartItem({ productVarId: firstItem.id });
+   };
+
+   const onAddPizza = async (productVarId: number, ingredients: number[]) => {
+      try {
+         await addCartItem({ productVarId, ingredients });
+      } catch (error) {
+         console.log(error);
+      }
+   };
 
    return (
       <Dialog open={Boolean(product)} onOpenChange={() => router.back()}>
@@ -30,11 +45,14 @@ export const ChooseProduct: React.FC<Props> = ({ product, className }) => {
                   name={product.name}
                   ingredients={product.ingredients}
                   variants={product.variants}
+                  onSubmit={onAddPizza}
                />
             ) : (
                <ChooseProductModal
                   imageUrl={product.imageUrl}
                   name={product.name}
+                  onSubmit={onAddProduct}
+                  price={firstItem.price}
                />
             )}
          </DialogContent>

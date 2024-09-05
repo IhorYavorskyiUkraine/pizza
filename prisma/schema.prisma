@@ -88,7 +88,10 @@ model Cart {
 
    token String?
 
-   totalAmount Int
+   totalAmount Int?
+
+   createdAt DateTime @default(now())
+   update    DateTime @updatedAt
 }
 
 model CartItem {
@@ -100,9 +103,12 @@ model CartItem {
    cart   Cart @relation(fields: [cartId], references: [id])
    cartId Int
 
-   quantity Int
+   quantity Int @default(1)
 
    ingredients Ingredient[]
+
+   createdAt DateTime @default(now())
+   update    DateTime @updatedAt
 }
 
 model Order {

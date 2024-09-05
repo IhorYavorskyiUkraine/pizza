@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@lib";
+import { cn, getPizzaDetails } from "@lib";
 import { Button } from "@ui";
 import { ProductWithRelations } from "../../@types/product";
 import {
@@ -11,8 +11,7 @@ import {
 } from "@components";
 import { PizzaSize, PizzaType, pizzaTypes } from "../../constants/pizza";
 import { Ingredient } from "@prisma/client";
-import { usePizzaOptions } from "@hooks/usePizzaOptions";
-import { getPizzaDetails } from "@lib/getPizzaDetails";
+import { usePizzaOptions } from "@hooks";
 
 interface Props {
    imageUrl: string;
@@ -20,7 +19,7 @@ interface Props {
    className?: string;
    ingredients: Ingredient[];
    variants: ProductWithRelations["variants"];
-   onClickAddCart?: VoidFunction;
+   onSubmit: (itemId: number, ingredients: number[]) => void;
 }
 
 export const ChoosePizzaModal: React.FC<Props> = ({
@@ -28,12 +27,13 @@ export const ChoosePizzaModal: React.FC<Props> = ({
    variants,
    imageUrl,
    ingredients,
-   onClickAddCart,
+   onSubmit,
    className,
 }) => {
    const {
       selectedSize,
       selectedType,
+      currentItemId,
       setSelectedSize,
       setSelectedType,
       availableSizes,
@@ -50,7 +50,9 @@ export const ChoosePizzaModal: React.FC<Props> = ({
    );
 
    const handleClickAdd = () => {
-      onClickAddCart?.();
+      if (currentItemId) {
+         onSubmit(currentItemId, Array.from(selectedIngredients));
+      }
    };
 
    return (

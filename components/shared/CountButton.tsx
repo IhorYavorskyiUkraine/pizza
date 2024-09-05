@@ -1,5 +1,5 @@
 import React from "react";
-import { cn } from "@libs";
+import { cn } from "@lib";
 import { CountIconButton } from "./CountIconButton";
 
 export interface CountButtonProps {

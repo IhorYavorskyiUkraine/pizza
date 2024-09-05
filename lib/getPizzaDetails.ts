@@ -1,4 +1,4 @@
-import { calcTotalPizzaPrice } from "@lib/calcTotalPizzaPrice";
+import { calcTotalPizzaPrice } from "@lib";
 import { mapPizzaType, PizzaSize, PizzaType } from "../constants/pizza";
 import { Ingredient, ProductVar } from "@prisma/client";
 
